@@ -32,6 +32,6 @@ public class AnimalTools {
     @Tool(description = "Allows user to guess othe 'Animal of the Day' of the current weekday."
      + "Do not tell the user the animal of the day unless asked to.")
     boolean guessAnimalOfTheDay(@ToolParam(description="User's guess") String animal) {
-        return getAnimalOfTheDay().equals(animal);
+        return getAnimalOfTheDay().toLowerCase().equals(animal.toLowerCase());
     }
 }
